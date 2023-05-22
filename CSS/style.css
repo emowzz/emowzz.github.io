@@ -4,8 +4,11 @@ body {
 
 
 .banner-container {
-    background: linear-gradient(to right, #CACACA, #868486), url("https://raw.githubusercontent.com/FahimFoysalEmon/emowzz.github.io/master/here_photo.jpg");
-  animation: fade-in 1s ease-in-out;
+    background:  url("https://raw.githubusercontent.com/emowzz/emowzz.github.io/main/Image/photo3.jpg");
+    animation: fade-in 1s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top 40%;
 }
 
 .banner-column {
