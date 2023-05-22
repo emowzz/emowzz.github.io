@@ -26,10 +26,56 @@
     <div class="row vh-100">
       <div class="col-md-9 banner-column m-auto text-center text-white p-4 border border-light">
         <h1 class="display:4 fw-bolder">Fahim Foysal Emon</h1>
-        <h3>Software Developer</h3>
+        <h3 id="job-title"></h3>
       </div>
     </div>
   </section>
+  
+  <script>
+    // Array of job titles
+    var jobTitles = [
+      "Full Stack Software Engineer",
+      "Backend Engineer (Spring Boot)",
+      "Frontend (React js / Thymeleaf)",
+      "Traveller"
+    ];
+  
+    var currentTitleIndex = 0;
+    var jobTitleElement = document.getElementById("job-title");
+    var currentTitle = "";
+    var isDeleting = false;
+    var typingSpeed = 200; // Adjust typing speed (in milliseconds)
+    var pauseDuration = 1500; // Adjust pause duration after completing a word/sentence (in milliseconds)
+  
+    // Function for typing effect
+    function type() {
+      var title = jobTitles[currentTitleIndex];
+  
+      if (isDeleting) {
+        currentTitle = title.substring(0, currentTitle.length - 1);
+        typingSpeed = 50; // Adjust deleting speed
+      } else {
+        currentTitle = title.substring(0, currentTitle.length + 1);
+        typingSpeed = 200; // Adjust typing speed
+      }
+  
+      jobTitleElement.innerHTML = currentTitle;
+  
+      if (!isDeleting && currentTitle === title) {
+        isDeleting = true;
+        typingSpeed = pauseDuration; // Pause after completing the word/sentence
+      } else if (isDeleting && currentTitle === "") {
+        isDeleting = false;
+        currentTitleIndex = (currentTitleIndex + 1) % jobTitles.length;
+        typingSpeed = 200; // Adjust typing speed after deleting the text
+      }
+  
+      setTimeout(type, typingSpeed);
+    }
+  
+    // Start the typing effect
+    type();
+  </script>
 
   <!-- this is nav-bar section -->
   <nav class="navbar navbar-expand-lg navbar-dark navbar-container">
