@@ -4,8 +4,8 @@ body {
 
 
 .banner-container {
-    background: linear-gradient(to right, #CACACA, #868486), url("https://www.imagehost.at/images/2023/05/22/my-sikkim-best-photo.jpg");
-    animation: fade-in 1s ease-in-out;
+    background: linear-gradient(to right, #CACACA, #868486), url("https://raw.githubusercontent.com/FahimFoysalEmon/emowzz.github.io/master/here_photo.jpg");
+  animation: fade-in 1s ease-in-out;
 }
 
 .banner-column {
