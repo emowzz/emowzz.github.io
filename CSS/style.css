@@ -4,12 +4,36 @@ body {
 
 
 .banner-container {
-    background-color: #CACACA;
+    background: linear-gradient(to right, #CACACA, #868486), url("https://www.imagehost.at/images/2023/05/22/my-sikkim-best-photo.jpg");
+    animation: fade-in 1s ease-in-out;
 }
 
 .banner-column {
     background-color: #868486;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
 }
+
+.banner-column h1 {
+    font-family: "Your Font Name", sans-serif;
+    font-size: 3rem;
+    color: #fff;
+  }
+  
+  .banner-column h3 {
+    font-family: "Your Font Name", sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+  }
+
+@keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 
 .navbar-container {
     top: 0%;
